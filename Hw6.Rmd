@@ -2,7 +2,7 @@
 title: "Hw6"
 author: "Arthur Starodynov"
 date: "2023-12-01"
-output: html_document
+output: github_document
 ---
 
 ```{r, message = F, warning = F}
@@ -95,7 +95,7 @@ boot_df %>%
 
 # CI for log(b1*b2)
 log_b1b2_CI <-
-bootstrap_df %>%
+boot_df %>%
   pivot_wider(names_from = term, values_from = estimate) %>% 
   rename(beta_1 = tmin, 
          beta_2 = prcp) %>% 
